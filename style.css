@@ -125,6 +125,7 @@ form input{
 .read{
      display: flex;
      justify-content: center;
+     align-items: center;
      max-width: 100px;
      gap: 20px;
 }
