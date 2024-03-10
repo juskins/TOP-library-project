@@ -121,15 +121,8 @@ form input{
      padding: 10px;
 }
 
-.read{
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     max-width: 100px;
-     gap: 0px 20px;
-}
 .read input{
-     width: 50%;
+     width: 20%;
 }
 .submit{
      display: flex;
