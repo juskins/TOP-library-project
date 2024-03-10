@@ -135,9 +135,9 @@ form input{
 .submit button{
      background-color: darkcyan;
      border: none;
-     padding: 20px;
+     padding: 10px;
      color: white;
-     width: 100px;
+     max-width: 100px;
 }
 .submit button:hover{
      background-color: darkblue;
@@ -158,6 +158,10 @@ button{
 @media screen and (max-width: 760px){
      body{
           font-family: 'Times New Roman', Times, serif;
+     }
+     form{
+          width: 90%;
+          /* margin: 50px 20px; */
      }
      .books{
           grid-template-columns: repeat(3,1fr);
