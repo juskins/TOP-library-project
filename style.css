@@ -125,7 +125,7 @@ form input{
 .read{
      display: flex;
      justify-content: center;
-     width: max-content;
+     max-width: 100px;
      gap: 20px;
 }
 .submit{
@@ -161,7 +161,6 @@ button{
      }
      form{
           width: 90%;
-          /* margin: 50px 20px; */
      }
      .books{
           grid-template-columns: repeat(3,1fr);
