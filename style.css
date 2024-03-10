@@ -112,7 +112,6 @@ form{
      flex-direction: column;
      gap: 10px;
      padding: 20px;
-
 }
 form h2{
      text-align: center;
@@ -127,7 +126,10 @@ form input{
      justify-content: center;
      align-items: center;
      max-width: 100px;
-     gap: 20px;
+     gap: 0px 20px;
+}
+.read input{
+     width: 50%;
 }
 .submit{
      display: flex;
