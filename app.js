@@ -4,11 +4,58 @@ const appendBook = document.querySelector('.appendBook');
 const cancel = document.querySelector('.cancel');
 const form = document.querySelector('form');
 let bookContainer = document.querySelector('.books');
+const error = document.querySelectorAll('input + span.error')
+const inputs = document.querySelectorAll('input:required');
+
+
+
+function formValidation(){
+     const array = Array.from(inputs);
+     const errorList = Array.from(error);
+     for(let i =0; i<inputs.length;i++){
+          array[i].addEventListener('input',()=>{
+               if(array[i].validity.valid){
+                    errorList[i].textContent = '';
+                    errorList[i].className = 'error'
+               }
+               else{
+                    showError(array[i],errorList[i])
+               }
+          })
+     }
+
+     appendBook.addEventListener('click',(e)=>{
+          e.preventDefault();
+          if(array[0].validity.valid && array[1].validity.valid && array[2].validity.valid){
+               addBookToLibrary(e)
+          }
+          else{
+               for(let i =0; i<inputs.length;i++){
+                    if(!array[i].validity.valid){
+                         showError(array[i],errorList[i])
+                    }
+               }
+          }
+          
+     })
+   
+     function showError(item,itemError){
+          if(item.validity.valueMissing){
+               itemError.textContent = 'This field shouldn\'t be empty';
+          }
+          itemError.className = 'error active'
+     }
+
+
+}
+
+
+formValidation()
 
 
 let myLibrary = []
 
-appendBook.addEventListener('click',addBookToLibrary)
+// appendBook.addEventListener('click',addBookToLibrary)
 addNewBookBtn.addEventListener('click',showForm)
 cancel.addEventListener('click',hideForm)
 

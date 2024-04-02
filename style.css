@@ -149,6 +149,14 @@ form input{
 button{
      cursor: pointer;
 }
+.error{
+     background: #900;
+     font-size: 80%;
+     color: white;
+}
+.error.active{
+     padding: 0.3em;
+}
 
 
 @media screen and (max-width: 760px){
